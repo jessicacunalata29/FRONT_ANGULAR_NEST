@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing-module';
-import { Perfil } from './components/perfil/perfil';
-import { Cliente} from './components/cliente/cliente';
-import { Layout } from './layout/layout';
-
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
+import { RouterModule } from '@angular/router'; 
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
-
-    Cliente,
-      Layout
+      LayoutComponent,
+    ClienteComponent  // ✅ este NO es standalone
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    Perfil
+     RouterModule, 
+    PerfilComponent,  // ✅ este SÍ es standalone
   ]
 })
 export class AdminModule {}

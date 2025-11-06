@@ -1,0 +1,11 @@
+<h1>Ingresar</h1>
+{{loginForm.value | json}}
+<form [formGroup]="loginForm">
+    <label>Ingrese correo:</label>
+    <input type="email" formControlName="email">
+    <br>
+    <label>Ingrese contraseña:</label>
+    <input type="password" formControlName="password">
+    <br>
+    <button (click)= "funIngresar()">Ingresar</button>
+</form>

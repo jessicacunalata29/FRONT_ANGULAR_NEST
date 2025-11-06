@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Perfil} from './components/perfil/perfil';
-import { Categoria } from './inventario/components/categoria/categoria';
-import { Layout } from './layout/layout';
+import { PerfilComponent} from './components/perfil/perfil.component';
+import { CategoriaComponent } from './inventario/components/categoria/categoria.component';
+import { LayoutComponent } from "./layout/layout.component";
 
 const routes: Routes = [
   {
     path:"",
-    component:Layout,
+    component:LayoutComponent,
     children:[
 
   {
     path: 'perfil',
-    component: Perfil
+    component: PerfilComponent
   },
   {
     path: 'categoria',
-    component: Categoria
+    component: CategoriaComponent
   }
 ]
   },
