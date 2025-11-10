@@ -5,6 +5,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { RouterModule } from '@angular/router'; 
 import { LayoutComponent } from './layout/layout.component';
+import { AppLayoutModule } from './layout/app.layout.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LayoutComponent } from './layout/layout.component';
     CommonModule,
     AdminRoutingModule,
      RouterModule, 
-    PerfilComponent,  // ✅ este SÍ es standalone
+    PerfilComponent,
+    AppLayoutModule  // ✅ este SÍ es standalone
   ]
 })
 export class AdminModule {}
